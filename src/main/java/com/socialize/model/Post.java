@@ -18,8 +18,8 @@ public class Post {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name ="user_id", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(nullable = false)
     private User user;
 
     @Column(length = 5000)
